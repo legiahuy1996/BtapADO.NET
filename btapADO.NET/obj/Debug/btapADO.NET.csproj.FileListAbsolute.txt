@@ -1,0 +1,9 @@
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\bin\btapADO.NET.dll.config
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\bin\btapADO.NET.dll
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\bin\btapADO.NET.pdb
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\obj\Debug\btapADO.NET.csprojResolveAssemblyReference.cache
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\obj\Debug\btapADO.NET.csproj.CoreCompileInputs.cache
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\obj\Debug\btapADO.NET.dll
+C:\Users\Huy\Desktop\btapADO.NET\btapADO.NET\obj\Debug\btapADO.NET.pdb
