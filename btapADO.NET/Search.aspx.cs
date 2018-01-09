@@ -24,8 +24,18 @@ namespace btapADO.NET
             lst.Add(new SqlParameter("@Company", CompanyName.Text));
 
             DataTable data = DA.ExecuteProcResult("sp_F03", lst);
-            gvEmp.DataSource = data;
-            gvEmp.DataBind();
+            if (data.Rows.Count == 0)
+            {
+                Response.Write("Không tồn tại nhân viên bạn tìm kiếm");
+                gvEmp.DataSource = null;
+                gvEmp.DataBind();
+            }  
+            else
+            {
+                gvEmp.DataSource = data;
+                gvEmp.DataBind();
+            }
+           
         }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
@@ -42,5 +52,7 @@ namespace btapADO.NET
             int so_dong = gvEmp.PageSize;       
             load();
         }
+
+ 
     }
 }

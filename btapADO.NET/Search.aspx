@@ -5,24 +5,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <%--CSS--%>
+    <link href="css/bootstrap-grid.css" rel="stylesheet" /><link href="css/bootstrap-grid.min.css" rel="stylesheet" /><link href="css/bootstrap-reboot.css" rel="stylesheet" /><link href="css/bootstrap-reboot.min.css" rel="stylesheet" /><link href="css/bootstrap.css" rel="stylesheet" /><link href="css/bootstrap.min.css" rel="stylesheet" />
+    <%--JS--%>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <label>EmpCode:      </label>
-            <asp:TextBox ID="EmpCode" runat="server" style="margin-left: 52px"></asp:TextBox>
+            <div class="form-group">
+                  <label>EmpCode:      </label>
+            <asp:TextBox ID="EmpCode" CssClass="form-control" runat="server" ></asp:TextBox>
+            </div>
+          
             
+            <div class="form-group">
+                <label>FullName:    </label>
+            <asp:TextBox ID="FullName"  CssClass="form-control" runat="server" ></asp:TextBox>
+            </div>
+            
+            <div class="form-group">
+                <label>CompanyName</label>
+            <asp:TextBox ID="CompanyName"  CssClass="form-control" runat="server" ></asp:TextBox>
+            </div>
+             <br />
+            <asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" CssClass="btn btn-primary" />
+            <a href="Employees.aspx" class="btn btn-primary">Quay lại</a>
             <br />
-            <label>FullName:    </label>
-            <asp:TextBox ID="FullName" runat="server" style="margin-left: 55px"></asp:TextBox>
-            <br />
-            <label>CompanyName</label>
-            <asp:TextBox ID="CompanyName" runat="server" style="margin-left: 21px"></asp:TextBox>
-            <br />
-            <asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" />
-            <a href="Employees.aspx">Quay lại</a>
-            <br />
-             <asp:GridView ID="gvEmp" runat="server" Height="271px" style="text-align:center;margin-top: 99px" Width="1264px" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AllowPaging="true" AllowSorting="True"  PageSize="10" OnPageIndexChanging="gvEmp_PageIndexChanging" >
+             <asp:GridView ID="gvEmp" runat="server" Height="271px" CssClass="table table-bordered text-center" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false" AllowPaging="true" AllowSorting="True"  PageSize="10" OnPageIndexChanging="gvEmp_PageIndexChanging" >
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775"  />
                 <Columns>
                         
