@@ -24,7 +24,7 @@ namespace btapADO.NET
             lst.Add(new SqlParameter("@Company", CompanyName.Text));
 
             DataTable data = DA.ExecuteProcResult("sp_F03", lst);
-            if (data.Rows.Count == 0)
+            if (data.Rows.Count == 0 || data == null)
             {
                 Response.Write("Không tồn tại nhân viên bạn tìm kiếm");
                 gvEmp.DataSource = null;

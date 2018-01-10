@@ -86,10 +86,6 @@ namespace btapADO.NET
       
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            //Kiểm tra rỗng
-         
-
-
             DataAccess DA = new DataAccess();
 
             int Active;
@@ -133,7 +129,9 @@ namespace btapADO.NET
             lst.Add(new SqlParameter("@Address", Address.Text));
             lst.Add(new SqlParameter("@Gender", Gender));
             lst.Add(new SqlParameter("@LSNationalityID", NationalityID.SelectedValue.ToString()));
-
+            DA.ExecuteProc("sp_F02", lst);
+            load();
+            Response.Write("Success!");
            
 
         }
